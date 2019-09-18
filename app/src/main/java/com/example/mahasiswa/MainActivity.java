@@ -1,5 +1,7 @@
 package com.example.mahasiswa;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -16,6 +18,9 @@ public class MainActivity extends AppCompatActivity {
 
         Button tahuBulat = findViewById(R.id.btnMhs);
         tahuBulat.setOnClickListener(btnTahuBulat);
+
+        Button btnlist = findViewById(R.id.btnList);
+        btnlist.setOnClickListener(List1);
     }
     private  View.OnClickListener btnTahuBulat = new View.OnClickListener() {
         @Override
@@ -24,4 +29,14 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         }
     };
+    private View.OnClickListener List1 = new View.OnClickListener(){
+        @Override
+        public void onClick(View view){
+            Intent intent = new Intent(MainActivity.this,ListActivity.class);
+            startActivity(intent);
+        }
+    };
+
+
+
 }
