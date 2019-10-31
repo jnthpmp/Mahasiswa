@@ -37,7 +37,8 @@ public class ListActivity extends AppCompatActivity {
 aa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 spinner.setAdapter(aa);
 
-spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener()
+    {
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         Toast.makeText(ListActivity.this,"Anda Memilih--"
